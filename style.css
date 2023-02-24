@@ -1,0 +1,174 @@
+@import url("https://fonts.googleapis.com/css2?family=Permanent+Marker&display=swap");
+
+:root {
+  --draw-pixel-small-size: 6px;
+  --draw-pixel-medium-size: 12px;
+  --draw-pixel-large-size: 24px;
+}
+
+* {
+  box-sizing: border-box;
+
+  margin: 0;
+  padding: 0;
+
+  font-family: "Permanent Marker", cursive;
+
+  user-select: none;
+}
+
+.flex-row,
+.flex-column {
+  display: flex;
+}
+
+.flex-column {
+  flex-direction: column;
+}
+
+.main-container {
+  width: 100vw;
+  height: 100vh;
+
+  justify-content: space-between;
+  align-items: center;
+}
+
+header {
+  background-color: black;
+  color: white;
+
+  font-size: 48px;
+
+  width: 100vw;
+  padding: 32px 0;
+  text-align: center;
+  box-shadow: 0 0 100px #000;
+}
+
+.bg-blur {
+  position: absolute;
+  z-index: -1;
+
+  width: 100vw;
+  height: 100vh;
+  background-image: url(https://wallpaperboat.com/wp-content/uploads/2019/06/synthwave-03.jpg);
+  background-size: 100vw 100vh;
+}
+
+.app-container {
+  width: 100vw;
+
+  justify-content: center;
+  align-items: center;
+  flex: 1 0 0;
+  backdrop-filter: blur(10px);
+}
+
+.drawing-container {
+  width: 500px;
+  height: 600px;
+
+  border-radius: 16px;
+
+  box-shadow: 0 0 100px #000;
+  background-color: rgba(211, 211, 211, 0.7);
+
+  justify-content: space-around;
+  align-items: center;
+}
+
+.drawing-canvas {
+  border: 2px groove #000;
+}
+
+.draw-pixel-row {
+  gap: 0;
+}
+
+.draw-pixel-small,
+.draw-pixel-medium,
+.draw-pixel-large {
+  background-color: #fff;
+}
+
+.draw-pixel-small {
+  width: var(--draw-pixel-small-size);
+  height: var(--draw-pixel-small-size);
+}
+
+.draw-pixel-medium {
+  width: var(--draw-pixel-medium-size);
+  height: var(--draw-pixel-medium-size);
+}
+
+.draw-pixel-large {
+  width: var(--draw-pixel-large-size);
+  height: var(--draw-pixel-large-size);
+}
+
+.drawing-controls {
+  justify-content: center;
+  align-items: center;
+  gap: 64px;
+}
+
+.drawing-size-change,
+.drawing-reset {
+  width: 100px;
+  height: 50px;
+  border-radius: 8px;
+  font-size: 16px;
+}
+
+.drawing-color-picker {
+  text-align: center;
+  justify-content: center;
+  align-items: center;
+  gap: 8px;
+}
+
+.drawing-color-picker-button,
+.drawing-color-picker-aesthetic {
+  border-radius: 50%;
+  width: 40px;
+  height: 40px;
+}
+
+.drawing-color-picker-button {
+  opacity: 0;
+}
+
+@keyframes spin {
+  from {
+    transform: rotate(0);
+  }
+  to {
+    transform: rotate(360deg);
+  }
+}
+
+.drawing-color-picker-aesthetic {
+  visibility: visible;
+  animation: 4s linear infinite forwards spin;
+  background-color: #000;
+  border: 6px outset #c9c9c9;
+  box-shadow: 0 0 8px #000;
+
+  justify-content: center;
+  align-items: center;
+}
+
+footer {
+  background-color: black;
+  color: white;
+
+  box-shadow: 0 0 100px #000;
+
+  font-size: 24px;
+
+  width: 100vw;
+  padding: 32px 0;
+
+  text-align: center;
+}

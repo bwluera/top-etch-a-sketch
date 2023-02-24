@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="./style.css" rel="stylesheet" />
+    <script src="./app.js" defer></script>
+    <title>Etch-a-Sketch</title>
+  </head>
+
+  <body>
+    <div class="main-container flex-column">
+      <header>Etch-a-Sketch</header>
+
+      <div class="bg-blur"></div>
+
+      <div class="app-container flex-row">
+        <div class="drawing-container flex-column">
+          <div class="drawing-canvas flex-column"></div>
+          <div class="drawing-controls flex-row">
+            <button class="drawing-size-change">Size: M</button>
+            <div class="drawing-color-picker flex-column">
+              <label>Color</label>
+              <div class="drawing-color-picker-aesthetic flex-column">
+                <input
+                  class="drawing-color-picker-button"
+                  type="color"
+                  value="#000000"
+                />
+              </div>
+            </div>
+            <button class="drawing-reset">Reset</button>
+          </div>
+        </div>
+      </div>
+
+      <footer>Created by SSND</footer>
+    </div>
+  </body>
+</html>
